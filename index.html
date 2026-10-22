@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Карманный комбайн</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section id="s-habits" class="on">
+  <h1>Привычки</h1>
+  <div class="row"><input class="in" id="hin" placeholder="Новая привычка…" maxlength="60"><button class="btn" id="hadd">Добавить</button></div>
+  <div id="hlist"></div>
+</section>
+
+<section id="s-calc">
+  <h1>Калькулятор</h1>
+  <div id="disp"><div class="e" id="ce"></div><div class="r" id="cr">0</div></div>
+  <div class="pad" id="pad"></div>
+</section>
+
+<section id="s-torch">
+  <h1>Фонарик</h1>
+  <div id="torch"></div>
+  <div class="sw" id="sw"></div>
+  <input type="range" id="br" min="20" max="100" value="100">
+  <div class="row" style="margin-top:12px"><button class="btn g" id="cam" style="flex:1">Включить вспышку камеры</button></div>
+  <p class="st" id="tmsg">Экран светит белым. Вспышка работает не на всех устройствах и браузерах.</p>
+</section>
+
+<section id="s-compass">
+  <h1>Компас</h1>
+  <div class="big" id="deg">—</div>
+  <div id="dial"><div id="fix"></div><i class="n"></i><i class="s"></i></div>
+  <div class="row" style="justify-content:center"><button class="btn" id="cbtn">Включить компас</button></div>
+  <p class="st" id="cmsg" style="text-align:center">Нужен телефон с датчиком. На компьютере будет стоять на месте.</p>
+</section>
+
+<section id="s-ruler">
+  <h1>Линейка</h1>
+  <div id="rw"><div id="rl"></div></div>
+  <p class="st">Подгони под реальность: приложи банковскую карту (8,56 см) и крути ползунок, пока длина не совпадёт.</p>
+  <input type="range" id="cal" min="25" max="80" step="0.1" value="37.8">
+  <div class="st" id="calv"></div>
+</section>
+
+<section id="s-fun">
+  <h1>Решалка</h1>
+  <div class="tabs2"><button class="btn" id="bd" style="flex:1">Кубик</button><button class="btn g" id="bc" style="flex:1">Монетка</button></div>
+  <div class="card"><div class="big2" id="res">🎲</div><button class="btn" id="roll" style="width:100%">Бросить</button></div>
+  <p class="st" id="hist"></p>
+</section>
+</main>
+
+<nav id="nav">
+  <button data-s="habits" class="on"><span>✅</span>Привычки</button>
+  <button data-s="calc"><span>🧮</span>Счёт</button>
+  <button data-s="torch"><span>🔦</span>Свет</button>
+  <button data-s="compass"><span>🧭</span>Компас</button>
+  <button data-s="ruler"><span>📏</span>Линейка</button>
+  <button data-s="fun"><span>🎲</span>Решалка</button>
+</nav>
+
+<script src="common.js"></script>
+<script src="tabs.js"></script>
+<script src="habits.js"></script>
+<script src="calculator.js"></script>
+<script src="flashlight.js"></script>
+<script src="compass.js"></script>
+<script src="ruler.js"></script>
+<script src="fun.js"></script>
+</body>
+</html>
